@@ -14,7 +14,6 @@
 		9ADC60F42CC7A63E00714967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC60F32CC7A63E00714967 /* Assets.xcassets */; };
 		9ADC60F72CC7A63E00714967 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC60F62CC7A63E00714967 /* Base */; };
 		9ADC61012CC7A6C200714967 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC61002CC7A6C200714967 /* PlayerView.swift */; };
-		9ADC61032CC7A98600714967 /* sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC61022CC7A98500714967 /* sample.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		9ADC60F62CC7A63E00714967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ADC60F82CC7A63E00714967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ADC61002CC7A6C200714967 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		9ADC61022CC7A98500714967 /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.mp4; path = ../../../Downloads/sample.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				9ADC60F32CC7A63E00714967 /* Assets.xcassets */,
 				9ADC60F52CC7A63E00714967 /* LaunchScreen.storyboard */,
 				9ADC60F82CC7A63E00714967 /* Info.plist */,
-				9ADC61022CC7A98500714967 /* sample.mp4 */,
 			);
 			path = CustomVideoPlayer;
 			sourceTree = "<group>";
@@ -134,7 +131,6 @@
 				9ADC60F42CC7A63E00714967 /* Assets.xcassets in Resources */,
 				9ADC60F72CC7A63E00714967 /* Base in Resources */,
 				9ADC60F22CC7A63C00714967 /* Base in Resources */,
-				9ADC61032CC7A98600714967 /* sample.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
