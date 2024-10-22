@@ -18,7 +18,79 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s9-iK-Vnb" customClass="PlayerView" customModule="CustomVideoPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33C-l4-dgS" userLabel="ControllVideoPlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mlr-kR-4f4">
+                                                <rect key="frame" x="28" y="699" width="337" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MuC-Ie-Gcf"/>
+                                                </connections>
+                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g4C-wO-n3B">
+                                                <rect key="frame" x="30" y="20.000000000000004" width="122" height="34.333333333333343"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-mA-GeJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="再生"/>
+                                                        <connections>
+                                                            <action selector="playBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gn-td-Wv4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB9-x4-g2f">
+                                                        <rect key="frame" x="66" y="0.0" width="56" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="停止"/>
+                                                        <connections>
+                                                            <action selector="pauseBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbG-Zf-GI4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-hC-3vZ">
+                                                <rect key="frame" x="20" y="624.66666666666663" width="353" height="34.333333333333371"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ1-SW-n6R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="&lt;&lt; 10秒"/>
+                                                        <connections>
+                                                            <action selector="skipBackwardBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8gr-ue-LgH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzW-Td-bXo">
+                                                        <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="10秒 &gt;&gt;"/>
+                                                        <connections>
+                                                            <action selector="skipForwardBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwv-mS-l4b"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="g4C-wO-n3B" firstAttribute="leading" secondItem="33C-l4-dgS" secondAttribute="leading" constant="30" id="1bV-eB-TJH"/>
+                                            <constraint firstItem="mlr-kR-4f4" firstAttribute="leading" secondItem="33C-l4-dgS" secondAttribute="leading" constant="30" id="2l3-2C-dVo"/>
+                                            <constraint firstItem="UFR-hC-3vZ" firstAttribute="leading" secondItem="33C-l4-dgS" secondAttribute="leading" constant="20" id="31y-IA-q7n"/>
+                                            <constraint firstAttribute="bottom" secondItem="mlr-kR-4f4" secondAttribute="bottom" constant="30" id="FPk-N2-6OO"/>
+                                            <constraint firstItem="mlr-kR-4f4" firstAttribute="top" secondItem="UFR-hC-3vZ" secondAttribute="bottom" constant="40" id="RTG-Qs-hVE"/>
+                                            <constraint firstAttribute="trailing" secondItem="UFR-hC-3vZ" secondAttribute="trailing" constant="20" id="T57-RE-Kmx"/>
+                                            <constraint firstAttribute="trailing" secondItem="mlr-kR-4f4" secondAttribute="trailing" constant="30" id="dU7-U7-Bj9"/>
+                                            <constraint firstItem="g4C-wO-n3B" firstAttribute="top" secondItem="33C-l4-dgS" secondAttribute="top" constant="20" id="rtQ-fS-VEt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="33C-l4-dgS" secondAttribute="bottom" id="DDv-co-eNg"/>
+                                    <constraint firstItem="33C-l4-dgS" firstAttribute="leading" secondItem="2s9-iK-Vnb" secondAttribute="leading" id="MPA-KW-Ehh"/>
+                                    <constraint firstItem="33C-l4-dgS" firstAttribute="top" secondItem="2s9-iK-Vnb" secondAttribute="top" id="ua0-qx-TKs"/>
+                                    <constraint firstAttribute="trailing" secondItem="33C-l4-dgS" secondAttribute="trailing" id="uca-au-u9K"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,11 +104,12 @@
                     </view>
                     <connections>
                         <outlet property="playerView" destination="2s9-iK-Vnb" id="gM3-Qj-QVZ"/>
+                        <outlet property="slider" destination="mlr-kR-4f4" id="ff6-AQ-ZVm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
